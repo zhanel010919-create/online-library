@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кітаптар тізімі</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Кітаптар тізімі</h2>
+        <ul>
+            {% for book in books %}
+                <li>{{ book.title }} - {{ book.author.name }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'profile' %}">Артқа</a>
+    </div>
+</body>
+</html>

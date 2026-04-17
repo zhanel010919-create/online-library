@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Авторды жою</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Авторды жою</h2>
+        <p>«{{ author.name }}» авторын жойғыңыз келе ме?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Иә, жою</button>
+            <a href="{% url 'book_list' %}">Болдырмау</a>
+        </form>
+    </div>
+</body>
+</html>
