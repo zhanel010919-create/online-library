@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кіру</title>
+</head>
+<body>
+    <h2>Кіру</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Кіру</button>
+    </form>
+    <p>Аккаунтыңыз жоқ па? <a href="{% url 'register' %}">Тіркелу</a></p>
+</body>
+</html>

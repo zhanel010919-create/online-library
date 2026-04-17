@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Жеке кабинет</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        a { text-decoration: none; margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <h2>Қош келдіңіз, {{ user.username }}!</h2>
+    <p>Бұл сіздің жеке кабинетіңіз.</p>
+    
+    <h3>📚 Кітаптармен жұмыс:</h3>
+    <a href="{% url 'add_book' %}">➕ Кітап қосу</a>
+    
+    <h3>🔗 Басқа беттер:</h3>
+    <a href="{% url 'home' %}">🏠 Басты бет</a> |
+    <a href="{% url 'about' %}">ℹ️ About беті</a> |
+    <a href="{% url 'user_by_id' user_id=123 %}">👤 Пайдаланушы ID 123</a> |
+    <a href="{% url 'book_by_slug' slug='test-book' %}">📖 Кітап іздеу (test-book)</a> |
+    <a href="{% url 'blog_list' %}">📝 Блог тізімі</a> |
+    
+    <br><br>
+    <a href="{% url 'logout' %}">🚪 Шығу</a>
+</body>
+</html>
