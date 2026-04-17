@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Кітап формасы</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h2>Кітап ақпараты</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Сақтау</button>
-    </form>
-    <br>
-    <a href="{% url 'profile' %}">← Артқа</a>
+    <div class="container">
+        <h2>Кітап ақпараты</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Сақтау</button>
+        </form>
+        <br>
+        <a href="{% url 'profile' %}">← Артқа</a>
+    </div>
 </body>
 </html>

@@ -2,10 +2,14 @@
 <html>
 <head>
     <title>404 - Бет табылмады</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>404 - Бет табылмады</h1>
-    <p>Кешіріңіз, сіз іздеген бет жоқ.</p>
-    <a href="/">Басты бетке оралу</a>
+    <div class="container">
+        <h1>404 - Бет табылмады</h1>
+        <p>Кешіріңіз, сіз іздеген бет жоқ.</p>
+        <a href="{% url 'home' %}">Басты бетке оралу</a>
+    </div>
 </body>
 </html>
